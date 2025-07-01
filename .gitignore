@@ -1,0 +1,37 @@
+# API Keys — never commit this
+
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Generated data (too large / sensitive for version control)
+data/translated_prompts.csv
+data/dataset_with_outputs.csv
+data/dataset_scored.csv
+data/dataset_final.csv
+data/flagged_translations.csv
+data/dataset_card_preview.md
+# Keep the source prompts in version control:
+# data/prompts.csv  ← intentionally NOT ignored
+# data/malayalam_review.csv ← intentionally NOT ignored (after review)
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp

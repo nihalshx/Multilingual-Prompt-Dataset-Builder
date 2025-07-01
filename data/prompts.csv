@@ -1,0 +1,201 @@
+prompt_en,task_category,difficulty,clarity_score,specificity_score,completeness_score
+"Summarise the main arguments made in a typical climate change policy debate, covering both sides in under 200 words.",summarisation,medium,4,4,4
+"Read the following passage and write a one-paragraph summary that captures the key idea: 'Artificial intelligence is transforming the way businesses operate, from automating repetitive tasks to enabling data-driven decisions at scale.'",summarisation,easy,5,5,4
+"Condense the following news article about a fictional city council meeting into three bullet points, each under 20 words.",summarisation,easy,5,4,4
+"Summarise the plot of Romeo and Juliet in exactly 100 words, maintaining chronological order.",summarisation,medium,5,5,5
+"Write an executive summary of a hypothetical annual report for a mid-sized technology company, covering revenue, challenges, and outlook.",summarisation,hard,4,4,4
+"Summarise the key differences between supervised and unsupervised machine learning in plain English, suitable for a non-technical reader.",summarisation,medium,5,5,4
+"In three sentences, summarise what photosynthesis is and why it matters for life on Earth.",summarisation,easy,5,5,5
+"Provide a one-page summary of the Industrial Revolution, covering causes, key developments, and lasting consequences.",summarisation,hard,4,4,5
+"Summarise the main themes of George Orwell's 1984 without revealing the ending, in under 150 words.",summarisation,medium,4,4,4
+"Create a concise briefing document summarising three major geopolitical events from the past decade and their ongoing impact.",summarisation,hard,4,5,4
+"Summarise the process of how a bill becomes a law in a democratic system in under 100 words.",summarisation,easy,5,5,5
+"Write a 200-word summary of the history of the internet, from ARPANET to the modern web.",summarisation,medium,5,5,4
+"Condense the following paragraph into a single sentence without losing the core meaning: 'The global economy is increasingly interconnected, meaning that a financial crisis in one country can rapidly spread to others through trade, investment, and currency markets.'",summarisation,easy,5,5,5
+"Summarise the scientific consensus on the health effects of ultra-processed foods in 100 words or fewer.",summarisation,medium,4,5,4
+"Write a TL;DR for a 10-page hypothetical research paper on the effectiveness of mindfulness-based stress reduction techniques.",summarisation,hard,4,4,4
+"Summarise the life and contributions of Marie Curie in exactly five sentences.",summarisation,easy,5,5,5
+"Read the following product description and summarise its key features in three bullet points.",summarisation,easy,5,4,4
+"Summarise the debate around universal basic income, presenting the strongest argument for and the strongest argument against.",summarisation,hard,4,5,4
+"In two paragraphs, summarise how vaccines work and why herd immunity matters.",summarisation,medium,5,5,5
+"Write a brief abstract (under 150 words) for a fictional study on the impact of social media use on teenage mental health.",summarisation,medium,4,4,4
+"What is the capital of Australia, and why do many people mistakenly think it is Sydney?",question_answering,easy,5,5,5
+"Explain how a transformer neural network works, as if you are teaching a computer science undergraduate.",question_answering,hard,4,5,4
+"What are the three branches of government in the United States, and what is each responsible for?",question_answering,easy,5,5,5
+"Why does the sky appear blue during the day but orange and red at sunset?",question_answering,easy,5,5,5
+"What is the difference between a virus and a bacteria, and why does it matter for treatment?",question_answering,medium,5,5,5
+"How does compound interest work, and why is starting to save early so important?",question_answering,medium,5,5,5
+"What caused the 2008 global financial crisis, and what were its main consequences?",question_answering,hard,4,5,4
+"Explain the concept of supply and demand using a real-world example that a 14-year-old would understand.",question_answering,medium,5,5,5
+"What is quantum entanglement, and why did Einstein call it 'spooky action at a distance'?",question_answering,hard,4,5,4
+"How does the human immune system recognise and fight a pathogen it has never encountered before?",question_answering,hard,4,5,4
+"What is the difference between climate and weather, and why is this distinction important?",question_answering,easy,5,5,5
+"Why is the Magna Carta considered historically significant, and what principles did it establish?",question_answering,medium,4,5,4
+"Explain how GPS technology determines your exact location anywhere on Earth.",question_answering,medium,4,5,4
+"What are the main differences between a parliamentary and a presidential system of government?",question_answering,medium,5,5,4
+"How does a lithium-ion battery store and release energy?",question_answering,medium,4,5,4
+"What is the placebo effect, and what does research say about how and why it works?",question_answering,hard,4,5,4
+"Explain the concept of opportunity cost with a concrete, everyday example.",question_answering,easy,5,5,5
+"What is CRISPR gene editing, and what are the most promising and most controversial applications?",question_answering,hard,4,5,4
+"How does a search engine like Google decide which results to show at the top of the page?",question_answering,medium,4,5,4
+"What is the difference between RAM and storage in a computer, explained in plain terms?",question_answering,easy,5,5,5
+"Write a short story (200–300 words) about a lighthouse keeper who discovers a message in a bottle that changes her life.",creative_writing,medium,5,4,4
+"Write the opening paragraph of a thriller novel set in a monsoon-flooded city, establishing tension and atmosphere.",creative_writing,hard,4,4,4
+"Compose a haiku about the feeling of finishing a long book late at night.",creative_writing,easy,5,4,5
+"Write a dialogue between two old friends who meet unexpectedly at an airport after ten years apart.",creative_writing,medium,4,4,4
+"Write a 150-word product description for a fictional smartwatch designed for elderly users, emphasising simplicity and safety.",creative_writing,medium,5,5,4
+"Write a children's story (200 words) about a curious fox who learns why honesty matters.",creative_writing,easy,5,4,4
+"Write a villain's monologue for a stage play. The villain believes they are saving the world, not destroying it.",creative_writing,hard,4,4,4
+"Write a poem about rain from the perspective of someone who grew up in a desert.",creative_writing,medium,4,4,4
+"Write the first email a newly hired employee sends to introduce themselves to their team. Make it warm, professional, and slightly witty.",creative_writing,easy,5,5,5
+"Write a 250-word science fiction flash fiction story where the twist is revealed in the final sentence.",creative_writing,hard,4,4,4
+"Write a travel blog post opening paragraph about visiting a small fishing village at dawn.",creative_writing,medium,4,4,4
+"Compose a lullaby for a child who is afraid of thunderstorms, using reassuring imagery.",creative_writing,easy,5,4,4
+"Write a persuasive letter from a fictional character arguing that their town should build a public library.",creative_writing,medium,4,4,4
+"Write a 200-word scene where a scientist makes an unexpected discovery in their lab at midnight.",creative_writing,hard,4,4,4
+"Write a eulogy for a fictional beloved community baker named Margaret, aged 84.",creative_writing,medium,4,4,4
+"Write the back-cover blurb for a mystery novel set in a remote mountain monastery.",creative_writing,medium,4,5,4
+"Write a short poem celebrating the Malayalam language and the culture it carries.",creative_writing,medium,4,4,4
+"Write a comedic monologue from the perspective of a houseplant that has been neglected for three weeks.",creative_writing,easy,5,4,4
+"Write an opening scene of a coming-of-age story set in a small Indian coastal town during the monsoon season.",creative_writing,hard,4,4,4
+"Write a formal letter of complaint to a fictional airline about a lost suitcase, in a tone that is firm but polite.",creative_writing,medium,5,5,4
+"Convert the following list of ingredients into a clearly numbered recipe for a simple tomato pasta dish: tomatoes, garlic, olive oil, pasta, salt, basil.",instruction_following,easy,5,5,5
+"Rewrite the following sentence in formal English: 'Hey, I just wanted to check if you got my email about the thing we talked about.'",instruction_following,easy,5,5,5
+"Format the following data as a Markdown table with columns for Name, Age, and City: Alice 30 London, Bob 25 Paris, Carol 35 Tokyo.",instruction_following,easy,5,5,5
+"Translate the following three sentences into bullet points summarising the key instruction: 'Before you begin, ensure the device is switched off. Remove the back panel using a Phillips screwdriver. Locate the battery compartment and slide out the old battery carefully.'",instruction_following,easy,5,5,5
+"Write a Python function that takes a list of numbers and returns the top three largest values without using the built-in sort function.",instruction_following,hard,5,5,5
+"Rewrite the following paragraph at a Grade 5 reading level: 'The mitochondria are membrane-bound organelles found in the cytoplasm of eukaryotic cells. They generate most of the cell's supply of adenosine triphosphate, which is used as a source of chemical energy.'",instruction_following,medium,5,5,5
+"Given the following meeting notes, extract only the action items and list them with the person responsible and deadline: [Meeting notes: Sarah to send project brief by Friday. Dev team to review API docs next week. Marketing to confirm launch date by end of month. John to book the venue by Wednesday.]",instruction_following,medium,5,5,5
+"Write a regular expression that matches any valid email address. Explain each component briefly.",instruction_following,hard,5,5,4
+"Convert the following text into a JSON object with keys: title, author, year, genre. Text: The Great Gatsby was written by F. Scott Fitzgerald in 1925. It is a classic work of literary fiction.",instruction_following,easy,5,5,5
+"List exactly five pros and five cons of remote work, in two separate bullet-point lists with bold headers.",instruction_following,medium,5,5,5
+"Write a SQL query that retrieves the top 10 customers by total order value from a table called 'orders' with columns: customer_id, order_value, order_date.",instruction_following,hard,5,5,5
+"Summarise the following paragraph in exactly one sentence of no more than 20 words: 'Exercise has been consistently shown in peer-reviewed research to improve mood, reduce anxiety, enhance cognitive performance, and support long-term cardiovascular health across all age groups.'",instruction_following,medium,5,5,5
+"Convert the following to a numbered step-by-step guide: 'Download the app, create an account, verify your email, set your preferences, and start using the service.'",instruction_following,easy,5,5,5
+"Write a function in JavaScript that debounces another function, accepting the target function and a delay in milliseconds as parameters.",instruction_following,hard,5,5,5
+"Create a weekly meal plan (Monday–Sunday) for a vegetarian athlete, with breakfast, lunch, and dinner for each day, in a structured format.",instruction_following,hard,5,5,4
+"Translate the following English sentence into exactly three languages (Spanish, French, Hindi) and label each: 'Knowledge shared is knowledge multiplied.'",instruction_following,easy,5,5,5
+"List the steps to safely change a car tyre, numbered 1–10, each step no longer than 15 words.",instruction_following,medium,5,5,5
+"Write a CSS class that centres a div both vertically and horizontally using Flexbox.",instruction_following,easy,5,5,5
+"Given a dataset with columns date, product, revenue — write a pandas one-liner to return total revenue per product, sorted descending.",instruction_following,hard,5,5,5
+"Rewrite the following passive-voice sentence in active voice: 'The report was reviewed by the committee, and several errors were identified.'",instruction_following,easy,5,5,5
+"A bat and a ball together cost $1.10. The bat costs $1.00 more than the ball. How much does the ball cost? Explain your reasoning step by step.",reasoning,easy,5,5,5
+"There are three boxes: one labelled 'Apples', one labelled 'Oranges', and one labelled 'Apples and Oranges'. All labels are wrong. You can pick one fruit from one box. How do you correctly label all three boxes?",reasoning,hard,5,5,5
+"If all Bloops are Razzles and all Razzles are Lazzles, are all Bloops definitely Lazzles? Explain your reasoning.",reasoning,medium,5,5,5
+"A train leaves Station A at 9:00 AM travelling at 60 km/h towards Station B. Another train leaves Station B at 10:00 AM travelling at 80 km/h towards Station A. The stations are 300 km apart. At what time do the trains meet?",reasoning,hard,5,5,5
+"You have a 3-litre jug and a 5-litre jug with no markings. How do you measure exactly 4 litres of water?",reasoning,medium,5,5,5
+"A farmer needs to cross a river with a fox, a chicken, and a bag of grain. His boat can only carry him and one other item. If left alone, the fox will eat the chicken and the chicken will eat the grain. How does he get everything across?",reasoning,medium,5,5,5
+"What comes next in the sequence: 2, 6, 12, 20, 30, 42, ___? Explain the pattern.",reasoning,easy,5,5,5
+"Five houses in a row are each painted a different colour. The owners all have different nationalities, different pets, different drinks, and different hobbies. Use the following clues to determine who owns the fish. [Provide a 5-clue subset of the Einstein Riddle.]",reasoning,hard,4,5,4
+"A store is selling apples at 3 for $1. If you buy 2 dozen apples, how much do you spend? Show your calculation.",reasoning,easy,5,5,5
+"You are a doctor and you have 8 pills, all identical in appearance. One pill is heavier than the others. Using a balance scale, how do you find the heavy pill in exactly 2 weighings?",reasoning,hard,5,5,5
+"If today is Wednesday and your meeting is in 100 days, what day of the week will the meeting be on? Show your working.",reasoning,medium,5,5,5
+"Explain the Monty Hall problem and prove mathematically why switching doors gives you a 2/3 chance of winning.",reasoning,hard,5,5,5
+"A snail is at the bottom of a 10-metre well. Each day it climbs 3 metres. Each night it slides back 2 metres. How many days does it take to escape the well?",reasoning,medium,5,5,5
+"Three friends split a restaurant bill equally. The bill is $75. Each pays $25. Later, the waiter realises the bill was only $70 and returns $5. Each person gets $1 back, and the waiter keeps $2. Each person paid $24, so 3×$24=$72, plus the $2 tip = $74. Where did the missing dollar go?",reasoning,hard,5,5,4
+"You have two ropes, each of which takes exactly 60 minutes to burn from one end to the other, but they burn unevenly. How do you measure exactly 45 minutes?",reasoning,hard,5,5,5
+"If a car travels 60 miles in 1 hour and 30 minutes, what is its average speed in miles per hour?",reasoning,easy,5,5,5
+"A room has 23 people in it. What is the approximate probability that at least two share the same birthday? Explain the reasoning.",reasoning,hard,5,5,4
+"You have 100 light bulbs in a row, all off. You toggle every bulb (1, 2, 3... 100). Then you toggle every second bulb (2, 4, 6...). Then every third, and so on up to 100. Which bulbs are left on?",reasoning,hard,5,5,4
+"A clock shows 3:15. What is the angle between the hour and minute hands?",reasoning,medium,5,5,5
+"I have a number. I double it, add 10, divide by 2, and subtract my original number. The result is always 5. Prove why this always works algebraically.",reasoning,medium,5,5,5
+"Summarise the key findings of a hypothetical study showing that people who walk more than 8,000 steps per day have significantly lower rates of cardiovascular disease.",summarisation,easy,5,5,5
+"Write a two-paragraph summary of the causes and consequences of the Great Depression, suitable for a high school student.",summarisation,medium,5,5,4
+"Condense the following three-paragraph argument into a single sentence: 'Social media has fundamentally altered how people form opinions. Algorithms curate content that reinforces existing beliefs. This leads to increased political polarisation over time.'",summarisation,medium,5,5,5
+"Summarise the main differences between Western and Eastern approaches to medicine, in under 150 words.",summarisation,medium,4,4,4
+"Write a brief abstract for a fictional research paper on how background music affects productivity in remote workers.",summarisation,medium,4,4,4
+"Summarise the life, reign, and legacy of Ashoka the Great in exactly five sentences.",summarisation,medium,5,5,5
+"In one paragraph, summarise how blockchain technology works and what problems it aims to solve.",summarisation,medium,4,4,4
+"Condense this job description into a 50-word summary highlighting only the key responsibilities and required skills.",summarisation,easy,5,5,5
+"Summarise the main ethical arguments for and against capital punishment in under 200 words.",summarisation,hard,4,4,4
+"Write a 100-word executive summary of a fictional product launch plan for a new electric bicycle targeted at urban commuters.",summarisation,medium,5,5,4
+"Summarise the plot of The Alchemist by Paulo Coelho in under 150 words without revealing the ending.",summarisation,medium,4,4,4
+"In three sentences, summarise what machine learning is and give one real-world application example.",summarisation,easy,5,5,5
+"Summarise the advantages and disadvantages of nuclear energy as a power source, covering safety, cost, and environmental impact.",summarisation,hard,4,5,4
+"Write a one-paragraph summary of a fictional news report about a city that banned single-use plastics and the results one year later.",summarisation,medium,5,4,4
+"Summarise the key arguments philosophers have made for and against free will in under 200 words.",summarisation,hard,4,4,4
+"Provide a bullet-point summary (maximum 5 points) of the main health risks associated with excessive screen time.",summarisation,easy,5,5,5
+"In two sentences, summarise why the fall of the Roman Empire matters to modern historians and political scientists.",summarisation,medium,4,5,4
+"Summarise the plot and central themes of the film Parasite (2019) in under 150 words without major spoilers.",summarisation,medium,4,4,4
+"Write a 100-word summary of the scientific method, suitable for inclusion in a middle-school science textbook.",summarisation,easy,5,5,5
+"Summarise the economic arguments for and against a four-day working week, referencing at least three distinct points on each side.",summarisation,hard,4,5,4
+"What is the difference between machine learning and deep learning, and when would you use each?",question_answering,medium,5,5,4
+"Explain how the human digestive system processes a meal from start to finish.",question_answering,medium,5,5,4
+"What is the significance of the Turing Test, and why do some researchers argue it is no longer a useful benchmark?",question_answering,hard,4,5,4
+"How does inflation affect the purchasing power of savings, and what strategies do economists recommend to protect against it?",question_answering,hard,4,5,4
+"What is the greenhouse effect and how does human activity intensify it?",question_answering,easy,5,5,5
+"Explain the difference between deductive and inductive reasoning, with one example of each.",question_answering,medium,5,5,5
+"What were the main causes of World War I, and how did the assassination of Archduke Franz Ferdinand trigger the conflict?",question_answering,hard,4,5,4
+"How does the stock market work, and what is the difference between a stock and a bond?",question_answering,medium,5,5,5
+"What is ADHD, and how does it differ from typical childhood behaviour in terms of diagnosis criteria?",question_answering,hard,4,5,4
+"Explain how nuclear fission works and why it releases so much energy.",question_answering,hard,4,5,4
+"What is the role of the United Nations, and what are its main limitations in enforcing international law?",question_answering,hard,4,5,4
+"How do vaccines achieve herd immunity, and what percentage of a population typically needs to be vaccinated?",question_answering,medium,5,5,5
+"What is the difference between a recession and a depression in economic terms?",question_answering,easy,5,5,5
+"Explain how social media algorithms decide what content to show a user.",question_answering,medium,4,5,4
+"What is the difference between empathy and sympathy, and why does it matter in personal relationships?",question_answering,easy,5,5,5
+"How does the peer review process in scientific publishing work, and what are its main weaknesses?",question_answering,hard,4,5,4
+"What is cognitive dissonance, and can you give an example of how it might affect someone's behaviour?",question_answering,medium,5,5,5
+"Explain the concept of a carbon footprint and list three meaningful ways an individual can reduce theirs.",question_answering,medium,5,5,5
+"What is the difference between syntax and semantics in programming languages?",question_answering,medium,5,5,5
+"How does the human brain form and consolidate long-term memories?",question_answering,hard,4,5,4
+"Write a short story (200–300 words) about a street musician in a monsoon-drenched city who changes the life of a passing stranger.",creative_writing,medium,5,4,4
+"Write a villanelle poem about the feeling of homesickness.",creative_writing,hard,4,4,4
+"Write a compelling two-paragraph opening for a historical novel set in 16th-century Kerala during the Portuguese spice trade.",creative_writing,hard,4,4,4
+"Write a 150-word product description for a fictional artisan coffee brand that sells ethically sourced single-origin beans.",creative_writing,medium,5,5,4
+"Write a humorous short story (200 words) about a cat who becomes the manager of a tech startup.",creative_writing,easy,5,4,4
+"Write a dramatic monologue from the perspective of the last library in a world that has banned books.",creative_writing,hard,4,4,4
+"Compose a sonnet about artificial intelligence and what it means to create something without consciousness.",creative_writing,hard,4,4,4
+"Write the opening two paragraphs of a mystery novel set in a remote hill station in India during the British colonial period.",creative_writing,hard,4,4,4
+"Write a 200-word letter from a grandmother to her grandchild, sharing three pieces of life advice.",creative_writing,medium,5,4,4
+"Write a flash fiction story (150 words) that begins with the sentence: 'The last train had already left.'",creative_writing,medium,5,4,4
+"Write a product review (150 words) for a fictional pair of noise-cancelling headphones, written by a music teacher.",creative_writing,medium,5,5,4
+"Write a two-verse song chorus about finding courage during difficult times. The tone should be uplifting but not clichéd.",creative_writing,medium,4,4,4
+"Write a 250-word short story entirely in second-person perspective, set during a first solo trip abroad.",creative_writing,hard,4,4,4
+"Write a speech (200 words) given by a retiring school principal on their last day, addressed to the students.",creative_writing,medium,5,4,4
+"Write a scene (200 words) in which two strangers are stuck in a lift together and discover they have a surprising connection.",creative_writing,medium,4,4,4
+"Write a 150-word description of a Kerala backwater sunset, using sensory language across all five senses.",creative_writing,medium,5,5,5
+"Write a fable (200 words) featuring an elephant and a sparrow, with a clear moral at the end.",creative_writing,easy,5,4,4
+"Write the opening paragraph of a children's book about a young girl who can speak to rivers.",creative_writing,easy,5,4,4
+"Write a 200-word reflection piece from the perspective of an old tree watching a city grow around it over 100 years.",creative_writing,medium,4,4,4
+"Write a resignation letter from a fictional employee named Priya who is leaving her corporate job to become a potter.",creative_writing,medium,5,5,5
+"Given a list of student scores [88, 92, 45, 78, 95, 60, 72], write a Python function that returns the mean, median, and highest score.",instruction_following,hard,5,5,5
+"Rewrite the following headline in a neutral, unbiased tone: 'Government's reckless tax plan could destroy middle-class families.'",instruction_following,medium,5,5,5
+"Write an HTML snippet for a responsive navigation bar with links: Home, About, Services, Contact. Use semantic HTML5 elements.",instruction_following,hard,5,5,5
+"Convert the following unstructured text into a properly formatted YAML configuration file: 'Server runs on port 8080. Database host is localhost. Max connections allowed is 100. Debug mode is false.'",instruction_following,medium,5,5,5
+"Write a bash script that loops through all .txt files in a directory and counts the total number of lines across all files.",instruction_following,hard,5,5,5
+"Rewrite the following academic sentence in plain English suitable for a general audience: 'The heterogeneous distribution of socioeconomic resources among urban and peri-urban populations exacerbates health outcome disparities.'",instruction_following,medium,5,5,5
+"Create a structured outline for a 10-minute presentation on climate change aimed at a business audience, with exactly five sections and a suggested time allocation for each.",instruction_following,medium,5,5,5
+"Write a Python class called BankAccount with methods deposit, withdraw, and get_balance. Include input validation so that negative amounts raise a ValueError.",instruction_following,hard,5,5,5
+"Given this CSV data: Name,Score\nAlice,87\nBob,93\nCarol,76 — write pandas code to load it, filter scores above 80, and print the names.",instruction_following,hard,5,5,5
+"Translate the following into formal English, then into casual English, and label both versions: 'Bro, just drop me a text when you're done.'",instruction_following,easy,5,5,5
+"Write a numbered checklist of 8 steps someone should take immediately after a car accident, before leaving the scene.",instruction_following,medium,5,5,5
+"Format the following as a properly structured business email with subject line, greeting, body, and sign-off: 'Telling the client the project will be delayed by two weeks due to technical issues and offering a 10% discount.'",instruction_following,medium,5,5,5
+"Write a regular expression that matches a valid Indian mobile number (10 digits starting with 6, 7, 8, or 9). Explain each part.",instruction_following,hard,5,5,5
+"Given the following dictionary in Python: {'a': 1, 'b': 2, 'c': 3} — write a one-liner to return a new dictionary with all values doubled.",instruction_following,medium,5,5,5
+"Write a LinkedIn post (under 150 words) announcing that you've just published an open-source multilingual dataset on Hugging Face. Keep the tone professional but approachable.",instruction_following,medium,5,5,5
+"List exactly seven principles of good UX design, each with a one-sentence explanation. Use a numbered list.",instruction_following,medium,5,5,5
+"Write a Dockerfile for a simple Python Flask application that runs on port 5000. Include comments explaining each instruction.",instruction_following,hard,5,5,5
+"Rewrite the following passive-voice paragraph in active voice: 'The report was compiled by the research team. Several errors were identified by the editor. Corrections were made and the document was finalised.'",instruction_following,medium,5,5,5
+"Write a JSON object representing a user profile with fields: id (integer), name (string), email (string), is_active (boolean), and roles (array of strings).",instruction_following,easy,5,5,5
+"Create a 5-day study plan for someone preparing for a Python programming certification exam, with specific topics and daily time allocations.",instruction_following,hard,5,5,4
+"A hospital has 3 doctors and 9 patients. Each doctor sees the same number of patients. One additional patient arrives. How do you reassign patients so each doctor still sees the same number, and what is the minimum number of reassignments needed?",reasoning,hard,5,5,5
+"Alice is taller than Bob. Bob is taller than Carol. Is Alice definitely taller than Carol? Is Carol definitely shorter than Alice? Explain.",reasoning,easy,5,5,5
+"You have a 6-sided die. What is the probability that you roll an even number or a number greater than 4? Show your working.",reasoning,medium,5,5,5
+"A father is 30 years older than his son. In 5 years, the father will be exactly 3 times as old as his son. How old is the son now?",reasoning,medium,5,5,5
+"There are 5 houses. The Englishman lives in the red house. The Swede keeps dogs. The Dane drinks tea. The green house is on the left of the white house. The green house owner drinks coffee. The person who smokes Pall Mall keeps birds. The owner of the yellow house smokes Dunhill. The man living in the centre house drinks milk. The Norwegian lives in the first house. Who drinks water?",reasoning,hard,4,5,4
+"A jar contains 10 red marbles and 10 blue marbles. You draw two marbles without replacement. What is the probability that both are the same colour?",reasoning,hard,5,5,5
+"If it takes 5 machines 5 minutes to make 5 widgets, how long does it take 100 machines to make 100 widgets?",reasoning,medium,5,5,5
+"You are in a room with two doors. One leads to freedom, one to danger. Two guards stand at the doors — one always tells the truth, one always lies. You can ask one guard one question. What do you ask?",reasoning,hard,5,5,5
+"A store offers a 20% discount on a shirt, then an additional 10% off the discounted price. Is the total discount 30%? If not, what is it?",reasoning,medium,5,5,5
+"Identify the flaw in this argument: 'Every student who studied hard passed the exam. Meera passed the exam. Therefore, Meera studied hard.'",reasoning,medium,5,5,5
+"A palindrome reads the same forwards and backwards. Is the word 'racecar' a palindrome? What about 'A man a plan a canal Panama' (ignoring spaces and capitalisation)?",reasoning,easy,5,5,5
+"You have a 12-hour clock showing 6:00. How many times will the hour and minute hands overlap in the next 12 hours?",reasoning,hard,5,5,5
+"Three friends divide a prize. Aju gets twice as much as Binu. Binu gets three times as much as Cinu. If the total prize is ₹12,000, how much does each person receive?",reasoning,medium,5,5,5
+"A box contains 3 red, 4 blue, and 5 green balls. What is the minimum number of balls you must draw (without looking) to guarantee at least 2 balls of the same colour?",reasoning,medium,5,5,5
+"Is the following statement true or false, and why: 'If all roses are flowers and some flowers fade quickly, then some roses fade quickly.'",reasoning,medium,5,5,5
+"A shopkeeper marks up an item 40% above cost price, then offers a 20% discount. What is the actual percentage profit or loss?",reasoning,medium,5,5,5
+"You flip a fair coin 3 times. What is the probability of getting exactly 2 heads? Show all possible outcomes.",reasoning,medium,5,5,5
+"Two pipes can fill a tank in 6 hours and 9 hours respectively. A drain pipe empties it in 18 hours. If all three are open, how long does it take to fill the tank?",reasoning,hard,5,5,5
+"Find the next term in the sequence: 1, 1, 2, 3, 5, 8, 13, ___. Name the sequence and explain the pattern.",reasoning,easy,5,5,5
+"A woman was 32 years old when her daughter was born. Today, the woman's age is exactly twice her daughter's age. How old is the daughter?",reasoning,easy,5,5,5
