@@ -1,328 +1,179 @@
-<div align="center">
-
 # 🌍 Multilingual Prompt Dataset Builder
 
-### *From 100 English prompts to a published, human-verified multilingual dataset — in 6 days, at zero cost.*
+A production-ready pipeline for building, scoring, and publishing a high-quality **multilingual LLM prompt dataset** — spanning **7 languages** and **5 task categories** — with native-speaker verified Malayalam translations and a Streamlit control panel.
 
-<br/>
-
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Gemini](https://img.shields.io/badge/Gemini_1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
-[![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-Datasets-FFD21E?style=for-the-badge)](https://huggingface.co/datasets)
-[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
-
-<br/>
-
-> **700+ annotated multilingual prompt-response pairs** · **7 languages** · **5 task categories** · **Human-verified Malayalam** · **$0 cost**
-
-</div>
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Datasets-orange.svg)](https://huggingface.co/datasets)
 
 ---
 
-## 📖 What Is This?
+## 📖 Overview
 
-**Multilingual Prompt Dataset Builder** is a fully automated, end-to-end Python pipeline that:
+The **Multilingual Prompt Dataset Builder** automates the full lifecycle of a research-grade prompt dataset:
 
-1. Takes **100 hand-crafted English prompts** across 5 NLP task categories
-2. Translates them into **6 additional languages** using Google Translate
-3. Generates **high-quality reference answers** with Google Gemini 1.5 Flash
-4. Applies a **custom multi-dimensional quality scoring** system
-5. Runs a **native-speaker Malayalam verification** step
-6. Publishes the final dataset to **Hugging Face Hub** — publicly and freely available
+1. **Translate** — English prompts → 6 target languages (free or paid API)
+2. **Generate outputs** — Gemini 1.5 Flash creates gold-standard reference responses
+3. **Score quality** — automated clarity, specificity, and completeness scoring (1–5)
+4. **Human review** — native Malayalam speaker verifies and corrects translations
+5. **Publish** — push to Hugging Face Hub with a full dataset card
 
-The result is a **research-grade, open-source dataset** ready for LLM fine-tuning, evaluation, and benchmarking.
-
----
-
-## ✨ Key Highlights
-
-|  | Feature | Details |
-|--|---------|---------|
-| 🧑‍🤝‍🧑 | **Human-verified Malayalam** | Native speaker reviews & corrects every Malayalam translation — rare in open NLP datasets |
-| 📐 | **3-Dimensional Quality Scoring** | Every prompt scored on Clarity (40%), Specificity (35%), Completeness (25%) |
-| 🤖 | **Gemini Reference Outputs** | Each prompt paired with a Gemini 1.5 Flash response for supervised learning use |
-| ♻️ | **Checkpointed Pipeline** | Safe to interrupt and resume at any step — no work is lost |
-| 💸 | **Zero Cost** | Built entirely on free-tier APIs (Google Translate, Gemini, Hugging Face) |
-| 🌐 | **7 Languages** | English, Malayalam, Hindi, Arabic, Chinese, Spanish, French |
+The Streamlit UI lets you run every step from a browser without touching the command line.
 
 ---
 
-## 📊 Dataset at a Glance
+## ✨ Key Features
 
-<div align="center">
-
-| Metric | Value |
-|:-------|:------|
-| 📝 Source Prompts | **100** (hand-authored in English) |
-| 🌍 Languages | **7** — EN · ML · HI · AR · ZH · ES · FR |
-| 🗃️ Total Dataset Rows | **700+** |
-| 🏷️ Task Categories | **5** — Summarisation · QA · Creative Writing · Instruction Following · Reasoning |
-| 📏 Quality Dimensions | **3** — Clarity · Specificity · Completeness |
-| ⏱️ Build Time | **6 days** |
-| 💰 Total Cost | **$0** |
-
-</div>
+| Feature | Detail |
+|---|---|
+| 🌐 **7 Languages** | English, Malayalam, Hindi, Arabic, Chinese (Simplified), Spanish, French |
+| 📝 **5 Task Types** | Summarisation, Q&A, Creative Writing, Instruction Following, Reasoning |
+| 🤖 **AI Outputs** | Reference responses via Gemini 1.5 Flash (resumable, checkpointed) |
+| 📊 **Quality Scores** | Clarity · Specificity · Completeness · Composite score (1–5) |
+| 🧑‍🏫 **Human-Verified ML** | Malayalam translations reviewed by a native speaker — rare in open datasets |
+| 🔁 **Resumable Pipeline** | Every step can be safely interrupted and re-run |
+| 🖥️ **Streamlit UI** | Full control panel — no CLI required |
+| 🚀 **HF Publishing** | One-click upload with auto-generated dataset card |
 
 ---
 
 ## 🗂️ Project Structure
 
 ```
-multilingual-prompt-dataset-builder/
+Multilingual Prompt Dataset Builder/
 │
-├── 📄 config.py                     ← Central config: paths, languages, API settings, scoring weights
-├── 🚀 run_pipeline.py               ← Master script — run all steps or individual steps
+├── app/
+│   └── streamlit_app.py        # Streamlit control panel (4 tabs)
 │
-├── 📦 pipeline/
+├── pipeline/
 │   ├── __init__.py
-│   ├── translate.py                 ← Step 1: Translate 100 prompts into 6 languages
-│   ├── generate_outputs.py          ← Step 2: Generate Gemini 1.5 Flash reference answers
-│   ├── quality_score.py             ← Step 3/4/5: Score, export review, merge corrections
-│   └── upload_hf.py                 ← Step 6: Publish final dataset to Hugging Face Hub
+│   ├── translate.py            # Step 1 — multilingual translation
+│   ├── generate_outputs.py     # Step 2 — Gemini reference output generation
+│   ├── quality_score.py        # Step 3 — automated quality scoring
+│   └── upload_hf.py            # Step 5 — Hugging Face publishing
 │
-├── 🖥️  app/
-│   ├── __init__.py
-│   └── streamlit_app.py             ← Interactive dataset browser (filter, view, download)
+├── data/
+│   ├── prompts.csv             # Source English prompts
+│   ├── translated_prompts.csv  # After Step 1
+│   ├── dataset_with_outputs.csv# After Step 2
+│   ├── dataset_scored.csv      # After Step 3
+│   ├── malayalam_review.csv    # Native-speaker review file (Step 4)
+│   ├── dataset_final.csv       # Final merged dataset
+│   └── dataset_card_preview.md # HF dataset card preview
 │
-├── 📂 data/
-│   ├── prompts.csv                  ← 100 source English prompts [committed]
-│   ├── malayalam_review.csv         ← Native-speaker review file [committed post-review]
-│   ├── translated_prompts.csv       ← [generated — gitignored]
-│   ├── dataset_with_outputs.csv     ← [generated — gitignored]
-│   ├── dataset_scored.csv           ← [generated — gitignored]
-│   └── dataset_final.csv            ← [generated — gitignored]
-│
+├── config.py                   # Centralized config (paths, keys, settings)
+├── run_pipeline.py             # Master CLI pipeline runner
 ├── requirements.txt
-├── .gitignore
 └── README.md
-```
-
----
-
-## ⚙️ Pipeline Architecture
-
-The pipeline runs **6 sequential, resumable steps**:
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     INPUT: prompts.csv                      │
-│              (100 hand-authored English prompts)            │
-└──────────────────────────┬──────────────────────────────────┘
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 1 · translate.py         │
-          │  Translates into 6 languages   │
-          │  → translated_prompts.csv      │
-          └────────────────┬───────────────┘
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 2 · generate_outputs.py  │
-          │  Gemini 1.5 Flash responses    │
-          │  → dataset_with_outputs.csv    │
-          └────────────────┬───────────────┘
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 3 · quality_score.py     │
-          │  Multi-dimensional scoring     │
-          │  → dataset_scored.csv          │
-          └────────────────┬───────────────┘
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 4 · quality_score.py     │
-          │  Export Malayalam review CSV   │
-          │  → malayalam_review.csv        │
-          └────────────────┬───────────────┘
-                           │
-                    👤 HUMAN REVIEW
-               (Native Malayalam speaker)
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 5 · quality_score.py     │
-          │  Merge corrections back in     │
-          │  → dataset_final.csv           │
-          └────────────────┬───────────────┘
-                           │
-                           ▼
-          ┌────────────────────────────────┐
-          │  STEP 6 · upload_hf.py         │
-          │  Publish to Hugging Face Hub   │
-          │  → 🤗 Live public dataset      │
-          └────────────────────────────────┘
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### 1️⃣ Clone the Repository
+### 1. Clone & Install
 
 ```bash
-git clone https://github.com/nihalshx/Multilingual-Prompt-Dataset-Builder.git
-cd Multilingual-Prompt-Dataset-Builder
-```
-
-### 2️⃣ Set Up a Virtual Environment
-
-```bash
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# macOS / Linux
-source venv/bin/activate
-
-# Install dependencies
+git clone https://github.com/YOUR_USERNAME/multilingual-prompt-dataset-builder.git
+cd multilingual-prompt-dataset-builder
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Configure API Keys
-
-API keys are entered through the **Streamlit ⚙️ Settings tab** at runtime — no `.env` file needed.
-
-| Key | Where to Get It | Required? |
-|-----|----------------|-----------|
-| `GEMINI_API_KEY` | [Google AI Studio](https://makersuite.google.com/app/apikey) | ✅ Required |
-| `HF_TOKEN` | [Hugging Face Tokens](https://huggingface.co/settings/tokens) *(Write access)* | ✅ Required |
-| `GOOGLE_CLOUD_API_KEY` | [Google Cloud Console](https://console.cloud.google.com) → Cloud Translation API | ⚡ Optional — improves translation quality |
-
----
-
-## 🏃 Running the Pipeline
-
-### Option A — Full Pipeline (Recommended)
-
-Run everything in one command:
-
-```bash
-python run_pipeline.py
-```
-
-The pipeline runs **Steps 1–4 automatically**, then pauses for the Malayalam human review. After completing the review file, finalize with:
-
-```bash
-python run_pipeline.py --step merge
-```
-
-### Option B — Step by Step
-
-Run each step individually for full control:
-
-```bash
-# Step 1: Translate all prompts into 6 languages
-python run_pipeline.py --step translate
-
-# Step 2: Generate Gemini 1.5 Flash reference outputs
-python run_pipeline.py --step outputs
-
-# Step 3: Compute multi-dimensional quality scores
-python run_pipeline.py --step score
-
-# Step 4: Export Malayalam review CSV for human verification
-python run_pipeline.py --step review
-
-#  ✋ PAUSE: Open data/malayalam_review.csv and complete the review
-
-# Step 5: Merge the reviewed corrections back into the dataset
-python run_pipeline.py --step merge
-```
-
-### 👤 The Malayalam Human Review (Step 4)
-
-This step is what makes this dataset **unique among open NLP datasets**.
-
-After running `--step review`, open `data/malayalam_review.csv` in Excel or Google Sheets:
-
-| Column | Action |
-|--------|--------|
-| `ml_review_status` | Set to `approved` if translation is correct |
-| `ml_review_status` | Set to `corrected` if it needs fixing |
-| `prompt_ml_corrected` | Paste the corrected Malayalam text here |
-
-> 💡 **Why this matters:** Most multilingual datasets rely purely on automated translation. Human verification of Malayalam text is exceptionally rare — this is a key portfolio differentiator.
-
----
-
-## 🖥️ Dataset Browser UI
-
-Explore the full dataset interactively with the built-in Streamlit app:
+### 2. Launch the Streamlit UI *(recommended)*
 
 ```bash
 streamlit run app/streamlit_app.py
-# → Opens at http://localhost:8501
 ```
 
-**What you can do:**
+Open the **⚙ Settings** tab and enter your API keys — no `.env` file needed.
 
-| Feature | Description |
-|---------|-------------|
-| 🔍 **Multi-axis Filtering** | Filter by language, task category, difficulty level, and quality score |
-| 🌐 **Side-by-side View** | Compare all 7 language translations in a single row |
-| 🚩 **Flag Bad Translations** | Mark poor outputs (auto-saved to `data/flagged_translations.csv`) |
-| 📥 **Export** | Download any filtered subset as a CSV file |
-
----
-
-## 📤 Publishing to Hugging Face
+### 3. Run via CLI *(alternative)*
 
 ```bash
-# Preview the auto-generated dataset card locally
-python -m pipeline.upload_hf --preview-card
+# Run all steps (1→4, then prompts you for --step merge)
+python run_pipeline.py
 
-# Publish the full dataset to Hugging Face Hub
-python -m pipeline.upload_hf --repo YOUR_USERNAME/multilingual-prompt-dataset-ml
-```
-
-🎉 Your dataset goes live at:
-```
-https://huggingface.co/datasets/YOUR_USERNAME/multilingual-prompt-dataset-ml
+# Or run individual steps
+python run_pipeline.py --step translate
+python run_pipeline.py --step outputs
+python run_pipeline.py --step score
+python run_pipeline.py --step review    # export Malayalam review CSV
+python run_pipeline.py --step merge     # merge reviewed Malayalam back in
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🔑 API Keys
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Translation** | `googletrans 4.0` / Google Cloud Translate API | Translate 100 prompts × 6 languages |
-| **LLM Outputs** | Google Gemini 1.5 Flash (`google-generativeai`) | Generate high-quality reference responses |
-| **Data Processing** | `pandas`, `numpy`, `tqdm` | Pipeline data manipulation and progress tracking |
-| **Quality Scoring** | Custom weighted schema | Multi-dimensional prompt quality annotation |
-| **Dataset Publishing** | `datasets`, `huggingface_hub` | Publish to Hugging Face Hub with dataset card |
-| **Browser UI** | Streamlit | Interactive dataset exploration and filtering |
-| **Human Verification** | Native Malayalam speaker | Manual correction of Malayalam translations |
+| Key | Required | Used For | Get It |
+|---|---|---|---|
+| `GEMINI_API_KEY` | ✅ Yes | Step 2 — generate reference outputs | [Google AI Studio](https://makersuite.google.com/app/apikey) |
+| `GOOGLE_CLOUD_API_KEY` | ⬜ Optional | Step 1 — higher-quality translation (falls back to free `googletrans`) | [Google Cloud Console](https://console.cloud.google.com) |
+| `HF_TOKEN` | ✅ Yes | Step 5 — publish to Hugging Face | [HF Settings → Tokens](https://huggingface.co/settings/tokens) (Write token) |
+
+> **Security:** Keys entered in the Streamlit UI are stored only in your browser session — never written to disk.
 
 ---
 
-## 📐 Quality Scoring Schema
+## ⚙️ Pipeline Steps
 
-Every prompt is scored on a **0.0 – 1.0 scale** across three dimensions:
+### Step 1 — Translation (`pipeline/translate.py`)
 
-### Prompt Quality Weights
+Translates every English prompt into 6 languages using either:
+- **`googletrans`** (free, ~100 req/hour, no key required) — default
+- **Google Cloud Translation API** (higher reliability, paid) — activated when `GOOGLE_CLOUD_API_KEY` is set
 
-| Dimension | Weight | What It Measures |
-|-----------|--------|-----------------|
-| 🎯 **Clarity** | **40%** | How unambiguous, concise, and well-structured the prompt is |
-| 🔬 **Specificity** | **35%** | How precisely the prompt defines the desired task output |
-| ✅ **Completeness** | **25%** | Whether all necessary context and constraints are provided |
+The pipeline saves a checkpoint every 10 rows. Rows that already have a translation are skipped on re-run.
 
-**Final Score Formula:**
-```
-quality_score = (clarity × 0.40) + (specificity × 0.35) + (completeness × 0.25)
-```
+**Target languages:**
 
-### Output Length Norms by Task
+| Code | Language |
+|---|---|
+| `ml` | Malayalam 🇮🇳 |
+| `hi` | Hindi 🇮🇳 |
+| `ar` | Arabic 🇸🇦 |
+| `zh-cn` | Chinese (Simplified) 🇨🇳 |
+| `es` | Spanish 🇪🇸 |
+| `fr` | French 🇫🇷 |
 
-Task-specific ideal word counts are applied when evaluating Gemini outputs:
+---
 
-| Task Category | Min Words | Ideal Words | Max Words |
-|---------------|:---------:|:-----------:|:---------:|
+### Step 2 — Reference Output Generation (`pipeline/generate_outputs.py`)
+
+Calls **Gemini 1.5 Flash** with task-specific system prompts to produce gold-standard reference responses for every English prompt. Features:
+- Exponential back-off retry (3 attempts)
+- Checkpoint saved every 20 rows
+- Already-generated outputs are skipped safely on re-run
+
+**Task-type system prompts:**
+
+| Category | Gemini Instruction |
+|---|---|
+| `summarisation` | Produce a clear, faithful summary |
+| `question_answering` | Give a precise, accurate answer |
+| `creative_writing` | Write with genuine creativity and craft |
+| `instruction_following` | Follow the instruction exactly and completely |
+| `reasoning` | Show step-by-step working before the final answer |
+
+---
+
+### Step 3 — Quality Scoring (`pipeline/quality_score.py`)
+
+Each English prompt is automatically scored on three dimensions:
+
+| Dimension | Weight | Method |
+|---|---|---|
+| **Clarity** | 40% | Inverse of sentence-length variance |
+| **Specificity** | 35% | Density of concrete nouns, numbers, and instruction verbs |
+| **Completeness** | 25% | Word count vs. per-task-type norms |
+
+Composite `quality_score` = weighted average, scaled **1–5**.
+
+**Task-type word-count norms:**
+
+| Task | Min | Ideal | Max |
+|---|---|---|---|
 | Summarisation | 30 | 80 | 250 |
 | Question Answering | 20 | 60 | 200 |
 | Creative Writing | 40 | 120 | 400 |
@@ -331,119 +182,139 @@ Task-specific ideal word counts are applied when evaluating Gemini outputs:
 
 ---
 
-## 🐛 Troubleshooting
+### Step 4 — Malayalam Native-Speaker Review
 
-<details>
-<summary><b>❓ <code>googletrans</code> returns empty strings?</b></summary>
+Exports `data/malayalam_review.csv` with columns:
 
-The free library can hit rate limits under heavy use. Try two fixes:
-1. Increase `TRANSLATE_DELAY` in `config.py` from `0.5` → `1.5`
-2. Add `GOOGLE_CLOUD_API_KEY` to switch to the more reliable Cloud Translation API
+| Column | Description |
+|---|---|
+| `prompt_en` | Original English prompt |
+| `prompt_ml_auto` | Machine-translated Malayalam |
+| `prompt_ml_corrected` | ← Reviewer fills this if needed |
+| `ml_review_status` | `pending` / `approved` / `corrected` |
+| `ml_reviewer_notes` | Optional notes |
 
-</details>
-
-<details>
-<summary><b>❓ Gemini returns rate limit errors?</b></summary>
-
-The free tier allows ~15 requests/minute. Increase `GEMINI_REQUEST_DELAY` in `config.py` to `5.0`. All pipeline steps checkpoint automatically — it is safe to interrupt and re-run at any time.
-
-</details>
-
-<details>
-<summary><b>❓ How do I add more prompts?</b></summary>
-
-Add rows to `data/prompts.csv` maintaining the existing column schema. No code changes are required — the pipeline will process all rows automatically.
-
-</details>
-
-<details>
-<summary><b>❓ Can I add more languages?</b></summary>
-
-Yes. Add an entry to the `LANGUAGES` dict in `config.py`:
-```python
-LANGUAGES = {
-    "ml": "Malayalam",
-    "hi": "Hindi",
-    # Add your language here, e.g.:
-    "de": "German",
-}
-```
-The translation, scoring, and Hugging Face upload steps all adapt automatically.
-
-</details>
-
-<details>
-<summary><b>❓ The Streamlit app won't start?</b></summary>
-
-The app requires the translated data to exist. Run at minimum Step 1 first:
-```bash
-python run_pipeline.py --step translate
-```
-
-</details>
+Open the file in Excel or Google Sheets, review, then run `--step merge` to fold the corrections back in.
 
 ---
 
-## 📋 Portfolio / CV Section
+### Step 5 — Publish to Hugging Face (`pipeline/upload_hf.py`)
+
+Uploads the final dataset + a full dataset card to the Hugging Face Hub:
+
+```bash
+python -m pipeline.upload_hf --repo YOUR_USERNAME/multilingual-prompt-dataset-ml
+```
+
+Preview the dataset card locally without uploading:
+
+```bash
+python -m pipeline.upload_hf --preview-card
+```
+
+---
+
+## 🖥️ Streamlit UI
+
+Run `streamlit run app/streamlit_app.py` to access the 4-tab control panel:
+
+| Tab | Description |
+|---|---|
+| **⚙ Settings** | Enter API keys securely (session-only, never persisted) |
+| **🚀 Pipeline** | Run / re-run each pipeline step with progress feedback |
+| **🌍 Browse** | Filter by category, difficulty, quality; view side-by-side translations |
+| **🚩 Flagged** | Review and export translations flagged as poor quality |
+
+The Browse tab supports:
+- Filter by task category, difficulty level, and quality score range
+- Side-by-side multi-language prompt view
+- Show/hide Gemini reference output
+- Paginated display (5 / 10 / 20 / 50 rows per page)
+- Download filtered subset as CSV
+- Flag individual translations with a reason
+
+---
+
+## 📊 Dataset Schema
+
+The final dataset (`data/dataset_final.csv`) contains:
+
+| Column | Type | Description |
+|---|---|---|
+| `prompt_en` | string | Original English prompt |
+| `prompt_ml` | string | Malayalam (human-verified) |
+| `prompt_hi` | string | Hindi (machine-translated) |
+| `prompt_ar` | string | Arabic (machine-translated) |
+| `prompt_zh_cn` | string | Chinese/Mandarin (machine-translated) |
+| `prompt_es` | string | Spanish (machine-translated) |
+| `prompt_fr` | string | French (machine-translated) |
+| `task_category` | string | One of 5 task types |
+| `difficulty` | string | `easy` / `medium` / `hard` |
+| `expected_output` | string | Gemini 1.5 Flash reference response |
+| `quality_score` | float | Composite score (1–5) |
+| `clarity_score` | float | Sentence-length variance score (1–5) |
+| `specificity_score` | float | Concrete noun/verb density score (1–5) |
+| `completeness_score` | float | Word-count norm score (1–5) |
+| `ml_review_status` | string | `approved` / `corrected` / `pending` |
+| `ml_reviewer_notes` | string | Optional reviewer notes |
+
+---
+
+## 📦 Requirements
 
 ```
-────────────────────────────────────────────────────────────────────
-Multilingual Prompt Dataset Builder — Published on Hugging Face
-Python · Google Translate API · Gemini API · Hugging Face | Jul–Oct 2025
-────────────────────────────────────────────────────────────────────
+# Core pipeline
+googletrans==4.0.0-rc1
+google-generativeai>=0.5.0
+google-cloud-translate>=3.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+tqdm>=4.66.0
+requests>=2.31.0
 
-• Built and published an open-source multilingual NLP dataset with
-  700+ rows (100 prompts × 7 languages) across 5 task categories,
-  structured for LLM fine-tuning and evaluation benchmarks.
+# Publishing
+datasets>=2.14.0
+huggingface_hub>=0.20.0
 
-• Designed a 3-dimensional quality annotation schema (Clarity 40%,
-  Specificity 35%, Completeness 25%) with task-specific output length
-  norms, applied programmatically across the entire dataset.
-
-• Integrated Google Translate, Gemini 1.5 Flash, and Hugging Face
-  Hub into a fully automated, checkpointed pipeline — built at $0
-  cost using exclusively free-tier APIs.
-
-• Conducted native-speaker verification of all Malayalam translations,
-  making this one of the very few open datasets with human-verified
-  Malayalam prompt-response content.
-
-• Developed an interactive Streamlit dataset browser supporting
-  multi-axis filtering, 7-language side-by-side comparison, bad
-  translation flagging, and CSV export.
-────────────────────────────────────────────────────────────────────
+# UI
+streamlit>=1.30.0
 ```
+
+Install with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🎯 Intended Uses
+
+- **LLM evaluation** — compare model outputs against `expected_output` baselines
+- **Fine-tuning** — prompt-response pairs as supervised training data
+- **Cross-lingual research** — prompt transfer across 7 language families
+- **Malayalam NLP** — the human-verified Malayalam subset is immediately usable for low-resource NLP
+
+---
+
+## ⚠️ Limitations
+
+- Machine translations (all languages except Malayalam) are unverified by native speakers
+- Reference outputs are AI-generated (Gemini 1.5 Flash) and may reflect model biases
+- Creative prompts may embed cultural assumptions of the English-speaking world
 
 ---
 
 ## 📄 License
 
-This project is released under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)** license.
-
-You are free to share and adapt this work for any purpose, provided appropriate credit is given.
-
----
-
-## 🤝 Contributing
-
-Contributions are very welcome! Areas where you can help:
-
-- 📝 Add more diverse English source prompts
-- 🌐 Add new language translations
-- 🔧 Improve quality scoring algorithms
-- 🐛 Report and fix translation errors
-- 📖 Improve documentation
-
-Please **open an issue** to discuss your idea or **submit a pull request** directly.
+This project is released under the **CC BY 4.0** license.  
+You are free to share and adapt the material for any purpose, provided appropriate credit is given.
 
 ---
 
-<div align="center">
+## 🙏 Acknowledgements
 
-**Built to advance open, multilingual NLP research — one prompt at a time. 🌍**
-
-<br/>
-
-*Made with ❤️ by [nihalshx](https://github.com/nihalshx)*
-
-</div>
+- [Google Gemini](https://deepmind.google/technologies/gemini/) for reference output generation
+- [Google Cloud Translation](https://cloud.google.com/translate) for multilingual translation
+- [Hugging Face](https://huggingface.co/) for dataset hosting and the `datasets` library
+- [Streamlit](https://streamlit.io/) for the interactive UI framework
